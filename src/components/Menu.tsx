@@ -53,7 +53,7 @@ export default function Menu(props: Props) {
 				{mainMenu.map((menuItem, index) => (
 					<Link
 						activeClassName={styles.activeClassName}
-						exact
+						// exact
 						key={index}
 						to={menuItem.to}
 						className={`${styles.link} ${styles.mainMenuLink}`}
