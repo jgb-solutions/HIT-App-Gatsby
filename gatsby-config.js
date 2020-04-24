@@ -41,7 +41,11 @@ module.exports = {
     {
       resolve: "gatsby-source-rest-api",
       options: {
-        endpoints: ["http://web.infotoutan.loc/api/news"],
+        endpoints: [
+          process.env.NODE_ENV === "development"
+            ? "http://web.infotoutan.loc/api/news"
+            : "https://web.infotoutan.com/api/news",
+        ],
       },
     },
     "gatsby-plugin-material-ui",
